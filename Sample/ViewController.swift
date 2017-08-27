@@ -70,7 +70,7 @@ class ViewController: UIViewController {
 
     func sample2Tapped() {
         
-        let sampleVC = SamplePopoverViewController()
+        let sampleVC = CustomPopupViewController()
         
         let backItem = UIBarButtonItem()
         backItem.title = ""

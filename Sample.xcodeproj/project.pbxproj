@@ -16,6 +16,12 @@
 		93CBE58D1F3D17590003BA4F /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE58C1F3D17590003BA4F /* SampleUITests.swift */; };
 		93CBE59C1F3DF5650003BA4F /* SamplePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */; };
 		93CBE59E1F3E5F390003BA4F /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */; };
+		93CBE5EE1F536DF50003BA4F /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5ED1F536DF50003BA4F /* CustomPopupViewController.swift */; };
+		93CBE5F11F536EA80003BA4F /* PopupPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F01F536EA80003BA4F /* PopupPresentationAnimator.swift */; };
+		93CBE5F31F536F0E0003BA4F /* PopupDismissionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */; };
+		93CBE5F51F5374D20003BA4F /* PopupTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */; };
+		93CBE5F71F5375600003BA4F /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */; };
+		93CBE5F91F537AF00003BA4F /* TouchForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		93CBE58E1F3D17590003BA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePopoverViewController.swift; sourceTree = "<group>"; };
 		93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		93CBE5ED1F536DF50003BA4F /* CustomPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
+		93CBE5F01F536EA80003BA4F /* PopupPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresentationAnimator.swift; sourceTree = "<group>"; };
+		93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDismissionAnimator.swift; sourceTree = "<group>"; };
+		93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupTransitioningDelegate.swift; sourceTree = "<group>"; };
+		93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresentationController.swift; sourceTree = "<group>"; };
+		93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchForwardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		93CBE56B1F3D17590003BA4F /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				93CBE5EF1F536E4C0003BA4F /* Popup Presentation */,
 				93CBE59A1F3DF5440003BA4F /* View Controllers */,
 				93CBE56C1F3D17590003BA4F /* AppDelegate.swift */,
 				93CBE5701F3D17590003BA4F /* Main.storyboard */,
@@ -135,8 +148,21 @@
 				93CBE56E1F3D17590003BA4F /* ViewController.swift */,
 				93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */,
 				93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */,
+				93CBE5ED1F536DF50003BA4F /* CustomPopupViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		93CBE5EF1F536E4C0003BA4F /* Popup Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				93CBE5F01F536EA80003BA4F /* PopupPresentationAnimator.swift */,
+				93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */,
+				93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */,
+				93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */,
+				93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */,
+			);
+			name = "Popup Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +299,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CBE5EE1F536DF50003BA4F /* CustomPopupViewController.swift in Sources */,
 				93CBE56F1F3D17590003BA4F /* ViewController.swift in Sources */,
 				93CBE59E1F3E5F390003BA4F /* OptionsViewController.swift in Sources */,
 				93CBE56D1F3D17590003BA4F /* AppDelegate.swift in Sources */,
 				93CBE59C1F3DF5650003BA4F /* SamplePopoverViewController.swift in Sources */,
+				93CBE5F11F536EA80003BA4F /* PopupPresentationAnimator.swift in Sources */,
+				93CBE5F71F5375600003BA4F /* PopupPresentationController.swift in Sources */,
+				93CBE5F51F5374D20003BA4F /* PopupTransitioningDelegate.swift in Sources */,
+				93CBE5F31F536F0E0003BA4F /* PopupDismissionAnimator.swift in Sources */,
+				93CBE5F91F537AF00003BA4F /* TouchForwardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
