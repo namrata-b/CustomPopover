@@ -14,6 +14,8 @@
 		93CBE5771F3D17590003BA4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CBE5751F3D17590003BA4F /* LaunchScreen.storyboard */; };
 		93CBE5821F3D17590003BA4F /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5811F3D17590003BA4F /* SampleTests.swift */; };
 		93CBE58D1F3D17590003BA4F /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE58C1F3D17590003BA4F /* SampleUITests.swift */; };
+		93CBE59C1F3DF5650003BA4F /* SamplePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */; };
+		93CBE59E1F3E5F390003BA4F /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		93CBE5881F3D17590003BA4F /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CBE58C1F3D17590003BA4F /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		93CBE58E1F3D17590003BA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePopoverViewController.swift; sourceTree = "<group>"; };
+		93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 		93CBE56B1F3D17590003BA4F /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				93CBE59A1F3DF5440003BA4F /* View Controllers */,
 				93CBE56C1F3D17590003BA4F /* AppDelegate.swift */,
-				93CBE56E1F3D17590003BA4F /* ViewController.swift */,
 				93CBE5701F3D17590003BA4F /* Main.storyboard */,
 				93CBE5731F3D17590003BA4F /* Assets.xcassets */,
 				93CBE5751F3D17590003BA4F /* LaunchScreen.storyboard */,
@@ -123,6 +127,16 @@
 				93CBE58E1F3D17590003BA4F /* Info.plist */,
 			);
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		93CBE59A1F3DF5440003BA4F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93CBE56E1F3D17590003BA4F /* ViewController.swift */,
+				93CBE59B1F3DF5650003BA4F /* SamplePopoverViewController.swift */,
+				93CBE59D1F3E5F390003BA4F /* OptionsViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CBE56F1F3D17590003BA4F /* ViewController.swift in Sources */,
+				93CBE59E1F3E5F390003BA4F /* OptionsViewController.swift in Sources */,
 				93CBE56D1F3D17590003BA4F /* AppDelegate.swift in Sources */,
+				93CBE59C1F3DF5650003BA4F /* SamplePopoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
