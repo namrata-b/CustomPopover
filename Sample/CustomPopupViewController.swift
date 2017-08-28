@@ -10,6 +10,7 @@ import UIKit
 
 class CustomPopupViewController: UIViewController {
     let popupTransitioningDelegate = PopupTransitioningDelegate()
+    var menuShowing = false
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.white
@@ -22,13 +23,18 @@ class CustomPopupViewController: UIViewController {
     func moreTapped(_ sender:UIButton) {
         print("moreTapped")
        
-        let optionsVC = OptionsViewController()
-        
-        optionsVC.modalPresentationStyle = .custom
-        optionsVC.transitioningDelegate = popupTransitioningDelegate
-        
-        self.present(optionsVC, animated: true, completion: nil)
+        if !self.menuShowing {
+            let optionsVC = OptionsViewController()
+            
+            optionsVC.modalPresentationStyle = .custom
+            optionsVC.transitioningDelegate = popupTransitioningDelegate
+            
+            self.present(optionsVC, animated: true) {
+//                self.menuShowing = true
+            }
+        }
         
     }
+        
 }
 

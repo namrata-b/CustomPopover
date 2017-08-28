@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     private func buildButton() -> UIButton {
         let sampleButton = UIButton.init()
         sampleButton.translatesAutoresizingMaskIntoConstraints = false
+        sampleButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         
         sampleButton.backgroundColor = UIColor.gray
         sampleButton.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)

@@ -12,8 +12,8 @@ class PopupPresentationController: UIPresentationController {
     var touchForwardingView: TouchForwardingView!
     
     override open var frameOfPresentedViewInContainerView: CGRect {
-        let height: CGFloat = 200
-        return CGRect(x: 50, y: height, width: 150, height: height)
+        let height: CGFloat = 83
+        return CGRect(x: UIScreen.main.bounds.width-170, y: 100, width: 150, height: height)
     }
     
     override func containerViewWillLayoutSubviews() {
@@ -22,8 +22,8 @@ class PopupPresentationController: UIPresentationController {
     
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
-        touchForwardingView = TouchForwardingView(frame: containerView!.bounds)
-        touchForwardingView.passthroughViews = [presentingViewController.view];
-        containerView?.insertSubview(touchForwardingView, at: 0)
+//        touchForwardingView = TouchForwardingView(frame: containerView!.bounds)
+//        touchForwardingView.passthroughViews = [presentingViewController.view];
+        containerView?.insertSubview(UIView.init(frame: containerView!.bounds), at: 0)
     }
 }
