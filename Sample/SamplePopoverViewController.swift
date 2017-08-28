@@ -18,23 +18,18 @@ class SamplePopoverViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "nav-more"), style: .plain, target: self, action: #selector(self.moreTapped))
     }
     
-    func moreTapped(_ sender:UIButton) {
-        print("moreTapped")
+    func moreTapped(_ sender:UIButton) {        
         
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.red
+        let viewController = OptionsViewController()
+        
         viewController.modalPresentationStyle = .popover
-//        viewController.modalTransitionStyle = .coverVertical
-        viewController.preferredContentSize = CGSize.init(width: 10, height: 20)
+        viewController.preferredContentSize = CGSize.init(width: 150, height: 83)
         
         let popOverPresentationController = viewController.popoverPresentationController
         popOverPresentationController?.delegate = self
-        let testview = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 20))
-        testview.backgroundColor = UIColor.black
-        popOverPresentationController?.sourceView = testview
-        popOverPresentationController?.sourceRect = CGRect.init(x: 150, y: 300, width: 1, height: 1)//sender.frame
-        popOverPresentationController?.permittedArrowDirections = .up
-        popOverPresentationController?.backgroundColor = UIColor.green
+        popOverPresentationController?.sourceView = self.navigationController?.view
+        popOverPresentationController?.sourceRect = CGRect.init(x: UIScreen.main.bounds.width-170, y: 120, width: 150, height: 1)//sender.frame
+        popOverPresentationController?.permittedArrowDirections = []
         
         self.present(viewController, animated: true, completion: nil)
         
@@ -42,5 +37,7 @@ class SamplePopoverViewController: UIViewController {
 }
 
 extension SamplePopoverViewController: UIPopoverPresentationControllerDelegate {
-    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
 }

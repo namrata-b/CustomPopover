@@ -51,8 +51,7 @@ class OptionsViewController: UIViewController {
         let normalBackground = imageWithColor(color: normalColour)
         optionButton.setBackgroundImage(normalBackground, for: .normal)
         
-        optionButton.contentEdgeInsets = UIEdgeInsetsMake(13, 10, 13, 10)
-        optionButton.layer.cornerRadius = 7.0
+        optionButton.contentEdgeInsets = UIEdgeInsetsMake(13, 10, 13, 10)        
         
         self.view.addSubview(optionButton)
         

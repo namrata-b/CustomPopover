@@ -20,8 +20,7 @@ class CustomPopupViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "nav-more"), style: .plain, target: self, action: #selector(self.moreTapped))
     }
     
-    func moreTapped(_ sender:UIButton) {
-        print("moreTapped")
+    func moreTapped(_ sender:UIButton) {    
        
         if !self.menuShowing {
             let optionsVC = OptionsViewController()
