@@ -21,6 +21,7 @@ class SamplePopoverViewController: UIViewController {
     func moreTapped(_ sender:UIButton) {        
         
         let viewController = OptionsViewController()
+        viewController.delegate = self
         
         viewController.modalPresentationStyle = .popover
         viewController.preferredContentSize = CGSize.init(width: 150, height: 83)
@@ -39,5 +40,17 @@ class SamplePopoverViewController: UIViewController {
 extension SamplePopoverViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
+    }
+}
+
+extension SamplePopoverViewController: OptionsMenuDelegate {
+    func option1MenuItemSelected() {
+        // TODO: do something
+        print("option1MenuItemSelected")
+    }
+    
+    func option2MenuItemSelected() {
+        // TODO: do something
+        print("option2MenuItemSelected")
     }
 }

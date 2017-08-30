@@ -13,6 +13,8 @@ class OptionsViewController: UIViewController {
     let highlightedColour = UIColor.init(red: 45.0/255.0, green: 51.0/255.0, blue: 59.0/255.0, alpha: 1)
     let normalColour = UIColor.init(red: 56.0/255.0, green: 63.0/255.0, blue: 72.0/255.0, alpha: 1)
     
+    var delegate: OptionsMenuDelegate?
+    
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.darkGray//UIColor.init(red: 56.0/255.0, green: 63.0/255.0, blue: 72.0/255.0, alpha: 1)
         
@@ -37,7 +39,7 @@ class OptionsViewController: UIViewController {
         self.view.addConstraint(NSLayoutConstraint.init(item: optionButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
         self.view.addConstraint(NSLayoutConstraint.init(item: optionButton, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1.0, constant: 0))
         self.view.addConstraint(NSLayoutConstraint.init(item: optionButton, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 0))
-        optionButton.addTarget(self, action: #selector(self.option1Tapped), for: .touchUpInside)
+        optionButton.addTarget(self, action: #selector(self.option2Tapped), for: .touchUpInside)
     }
     
     private func buildButton() -> UIButton {
@@ -59,7 +61,12 @@ class OptionsViewController: UIViewController {
     }
     
     func option1Tapped() {
-        
+        self.delegate?.option1MenuItemSelected()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func option2Tapped() {
+        self.delegate?.option2MenuItemSelected()
         dismiss(animated: true, completion: nil)
     }
     
@@ -78,4 +85,9 @@ class OptionsViewController: UIViewController {
         return image
     }
     
+}
+
+public protocol OptionsMenuDelegate {
+    func option1MenuItemSelected()
+    func option2MenuItemSelected()
 }

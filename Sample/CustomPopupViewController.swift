@@ -24,6 +24,7 @@ class CustomPopupViewController: UIViewController {
        
         if !self.menuShowing {
             let optionsVC = OptionsViewController()
+            optionsVC.delegate = self
             
             optionsVC.modalPresentationStyle = .custom
             optionsVC.transitioningDelegate = popupTransitioningDelegate
@@ -35,5 +36,17 @@ class CustomPopupViewController: UIViewController {
         
     }
         
+}
+
+extension CustomPopupViewController: OptionsMenuDelegate {
+    func option1MenuItemSelected() {
+        // TODO: do something
+        print("option1MenuItemSelected")
+    }
+    
+    func option2MenuItemSelected() {
+        // TODO: do something
+        print("option2MenuItemSelected")
+    }
 }
 
