@@ -10,7 +10,6 @@ import UIKit
 
 class CustomPopupViewController: UIViewController {
     let popupTransitioningDelegate = PopupTransitioningDelegate()
-    var menuShowing = false
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.white
@@ -20,22 +19,17 @@ class CustomPopupViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "nav-more"), style: .plain, target: self, action: #selector(self.moreTapped))
     }
     
-    func moreTapped(_ sender:UIButton) {    
-       
-        if !self.menuShowing {
-            let optionsVC = OptionsViewController()
-            optionsVC.delegate = self
-            
-            optionsVC.modalPresentationStyle = .custom
-            optionsVC.transitioningDelegate = popupTransitioningDelegate
-            
-            self.present(optionsVC, animated: true) {
-//                self.menuShowing = true
-            }
+    func moreTapped(_ sender:UIButton) {
+        let optionsVC = OptionsViewController()
+        optionsVC.delegate = self
+        
+        optionsVC.modalPresentationStyle = .custom
+        optionsVC.transitioningDelegate = popupTransitioningDelegate
+        
+        self.present(optionsVC, animated: true) {
         }
-        
     }
-        
+    
 }
 
 extension CustomPopupViewController: OptionsMenuDelegate {

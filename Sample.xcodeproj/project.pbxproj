@@ -21,7 +21,6 @@
 		93CBE5F31F536F0E0003BA4F /* PopupDismissionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */; };
 		93CBE5F51F5374D20003BA4F /* PopupTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */; };
 		93CBE5F71F5375600003BA4F /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */; };
-		93CBE5F91F537AF00003BA4F /* TouchForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDismissionAnimator.swift; sourceTree = "<group>"; };
 		93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupTransitioningDelegate.swift; sourceTree = "<group>"; };
 		93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresentationController.swift; sourceTree = "<group>"; };
-		93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchForwardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,6 @@
 				93CBE5F21F536F0E0003BA4F /* PopupDismissionAnimator.swift */,
 				93CBE5F41F5374D20003BA4F /* PopupTransitioningDelegate.swift */,
 				93CBE5F61F5375600003BA4F /* PopupPresentationController.swift */,
-				93CBE5F81F537AF00003BA4F /* TouchForwardingView.swift */,
 			);
 			name = "Popup Presentation";
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 				93CBE5F71F5375600003BA4F /* PopupPresentationController.swift in Sources */,
 				93CBE5F51F5374D20003BA4F /* PopupTransitioningDelegate.swift in Sources */,
 				93CBE5F31F536F0E0003BA4F /* PopupDismissionAnimator.swift in Sources */,
-				93CBE5F91F537AF00003BA4F /* TouchForwardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

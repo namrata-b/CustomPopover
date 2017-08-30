@@ -21,7 +21,7 @@ class PopupPresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning
         let animationDuration = transitionDuration(using: transitionContext)
         
         if let toViewController = toViewController {
-            toViewController.view.transform = CGAffineTransform(translationX: 0, y: -42)//-containerView.bounds.width)
+            toViewController.view.transform = CGAffineTransform(translationX: 0, y: -42)
             toViewController.view.layer.shadowColor = UIColor.black.cgColor
             toViewController.view.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
             toViewController.view.layer.shadowOpacity = 0.3

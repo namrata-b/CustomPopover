@@ -15,7 +15,6 @@ class PopupDismissionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
-//        let containerView = transitionContext.containerView
         
         let animationDuration = transitionDuration(using: transitionContext)
         

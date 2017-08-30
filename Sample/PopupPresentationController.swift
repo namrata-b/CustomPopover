@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PopupPresentationController: UIPresentationController {
-    var touchForwardingView: TouchForwardingView!
+class PopupPresentationController: UIPresentationController {    
     
     override open var frameOfPresentedViewInContainerView: CGRect {
         let height: CGFloat = 83
