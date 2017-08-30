@@ -21,8 +21,15 @@ class PopupPresentationController: UIPresentationController {
     
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
-//        touchForwardingView = TouchForwardingView(frame: containerView!.bounds)
-//        touchForwardingView.passthroughViews = [presentingViewController.view];
+        
+        let tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(self.backgroundTapped))
+        containerView?.addGestureRecognizer(tapGestureRecognizer)
+        
         containerView?.insertSubview(UIView.init(frame: containerView!.bounds), at: 0)
+    }
+    
+    func backgroundTapped() {
+        //dismiss popover
+        presentedViewController.dismiss(animated: true, completion: nil)
     }
 }
