@@ -20,9 +20,7 @@ class PopupDismissionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: animationDuration, animations: {
             fromViewController?.view.transform = CGAffineTransform.init(translationX: 0, y: -42)
-            fromViewController?.view.alpha = 1.0
-        }, completion: { (finished) in
-            fromViewController?.view.alpha = 0.0
+        }, completion: { (finished) in            
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
